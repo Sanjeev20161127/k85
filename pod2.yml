@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: httpdPod
+  labels:
+    name: httpdLabel
+spec:
+  containers:
+    - name: httpd
+      image: httpd
+      ports:
+        - containerPort: 80
+      resources:  
+       limits:
+        memory: "128Mi"
+        cpu: "500m"
+   
