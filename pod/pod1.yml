@@ -1,9 +1,9 @@
 apiVersion: v1   #API version
 kind: Pod   # Object type
 metadata:   #Set of data which describe Object.
-  name: testPod
+  name: testpod
   labels:   # n number labels can add under labels section, here name label 
-    name: testPod
+    name: testpod
 spec:                   # Data which describes the state of the Object
   containers:           # Data which describes the Container details
    - name: nginx    # name of the container
