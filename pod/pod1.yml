@@ -1,15 +1,15 @@
-apiVersion: v1
-kind: Pod
-metadata:
+apiVersion: v1   #API version
+kind: Pod   # Object type
+metadata:   #Set of data which describe Object.
   name: testPod
-  labels:
+  labels:   # n number labels can add under labels section, here name label 
     name: testPod
-spec:
-  containers:
-   - name: nginx
-     image: nginx
+spec:                   # Data which describes the state of the Object
+  containers:           # Data which describes the Container details
+   - name: nginx    # name of the container
+     image: nginx   #  Image which is used to create Container
      command: ["/bin/bash", "-c", "while true; do echo Hello-Adam; sleep 8 ; done"]
-     resources:
-      limits:
+     resources:    #describe resource requirments 
+      limits:   #the max capacity the container can use from the worker
         memory: "128Mi"
         cpu: "500m"
