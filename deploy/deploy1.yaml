@@ -19,11 +19,11 @@ spec:
       - name: main
         image: ubuntu  # ubuntu:22.10 , it pull alway latest one.
         command: ["/bin/bash", "-c", "while true; do echo Hello-Adam; sleep 5; done"]
-        nodeSelector:
-         role: worker1
         resources:
           limits:
             memory: "128Mi"
             cpu: "500m"
         ports:
         - containerPort: 80
+      nodeSelector:
+       role: worker1
