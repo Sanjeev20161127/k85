@@ -1,0 +1,27 @@
+---
+# Deployment Object /deploy understanding 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy1
+spec:
+  replica: 2
+  selector:
+    matchLabels:
+      app: deployment1
+  template:
+    metadata:
+      name: ubuntupod
+      labels:
+        app: deployment1
+    spec:
+      containers:
+      - name: main
+        image: ubuntu  # ubuntu:22.10 , it pull alway latest one.
+        command: ["/bin/bash", "-c", "while true; do echo Hello-Adam; sleep 5; done"]
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
