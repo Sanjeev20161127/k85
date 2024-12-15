@@ -1,0 +1,13 @@
+---
+# Services /svc object understanding   
+apiVersion: v1
+kind: Service
+metadata:
+  name: httpdservice
+spec:
+  selector:
+    app: deployhttpd
+  ports:
+  - port: 90
+    targetPort: 80
+    
