@@ -10,3 +10,4 @@ spec:
     targetPort: 80   # Pods port
   type: NodePort   # it can be ClusterIP (default) or NodePort or loadbalancer/ingress ( NodePort + AWS load balancer) or headless
    # 30000 - 32767
+   
