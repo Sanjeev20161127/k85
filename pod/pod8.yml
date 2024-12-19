@@ -21,3 +21,8 @@ spec:
        limits:
         memory: "128Mi"
         cpu: "500m"
+      imagePullPolicy: IfNotPresent  #default is always, can keep never also.  
+
+#$ kubectl exec microservice1 -c main -it -- /bin/bash
+#$ apt update && apt install -y curl
+#$ curl localhost:80
