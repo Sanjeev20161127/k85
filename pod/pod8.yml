@@ -16,7 +16,7 @@ spec:
         cpu: "500m"
     - name: ubuntu
       image: ubuntu
-      command: ["/bin/bash", "-c", "while true; do echo Hello-Adam; sleep 8 ; done"]  #  must specify at least one command for the container
+      command: ["/bin/bash", "-c", "while true; do echo Hello-Sanjeev; sleep 8 ; done"]  #  must specify at least one command for the container
       resources:
        limits:
         memory: "128Mi"

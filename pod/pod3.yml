@@ -8,7 +8,7 @@ spec:
   containers:
   - name: main
     image: ubuntu
-    command: ["/bin/bash", "-c", "while true; do echo Hello-Adam; sleep 8 ; done"]
+    command: ["/bin/bash", "-c", "while true; do echo Hello-Sanjeev; sleep 8 ; done"]
     resources:
       limits:
         memory: "128Mi"
