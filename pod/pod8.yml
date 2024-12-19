@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: httpdPod
+  labels:
+    name: httpdLabel
+spec:
+  containers:
+    - name: httpd1
+      image: httpd
+      ports:
+        - containerPort: 80
+      resources:
+       limits:
+        memory: "128Mi"
+        cpu: "500m"
+    - name: ubuntu
+      image: ubuntu
+      resources:
+       limits:
+        memory: "128Mi"
+        cpu: "500m"
